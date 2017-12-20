@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */                   Scanner scan = new Scanner(System.in);
+        int elements = scan.nextInt();
+        int arr[] = new int[elements];
+        int pos = 0, neg = 0, zero = 0;
+        for(int i  = 0; i < elements; i++) {
+            arr[i] = scan.nextInt();
+            if(arr[i] > 0) {
+                pos++;
+            }
+            else if(arr[i] < 0) {
+                neg++;
+            }
+            else {
+                zero++;
+            }
+        }
+        System.out.println((double)pos/elements);
+        System.out.println((double)neg/elements);
+        System.out.println((double)zero/elements);
+    }
+}
